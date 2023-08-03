@@ -1,0 +1,33 @@
+/**
+ * マウス移動時の挙動
+ */
+div.mousecircle {
+  position: fixed;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.3;
+  border: 10px solid blue;
+  margin: -55px 0 0 -55px;
+  border-radius: 100px;
+  height: 100px;
+  width: 100px;
+}
+
+/**
+ * クリック時の挙動
+ */
+div.mousecircleclick {
+  margin: -45px 0 0 -45px !important;
+  border-radius: 80px !important;
+  height: 80px !important;
+  width: 80px !important;
+  border: 10px solid green !important;
+  transition: transform 0.5s;
+}
+
+/**
+ * 非表示設定
+ */
+div.circlehide {
+  display: none;
+}

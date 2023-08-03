@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "mouse circle",
+  "version": "1.0.0",
+  "description": "マウスポインタの周りに円を表示する",
+  "icons": {
+    "16": "img/icon16.png",
+    "48": "img/icon48.png",
+    "128": "img/icon128.png"
+  },
+  "content_scripts": [{
+    "matches": [ "http://*/*", "https://*/*" ],
+    "js":[
+      "js/content.js",
+      "js/mouseCircle.js"
+    ],
+    "css": [
+      "css/mouseCircle.css"
+    ],
+    "run_at": "document_end"
+  }],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "toggle": {
+      "suggested_key": {
+        "default": "Alt+M"
+      },
+      "description": "マウスポインタの周りに円を表示"
+    }
+  },
+  "permissions": [
+    "storage",
+    "commands"
+  ]
+}
